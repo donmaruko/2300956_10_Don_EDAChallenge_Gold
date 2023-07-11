@@ -1,0 +1,11 @@
+customer_id,age,gender,location,product_category,revenue,satisfaction_level
+1,25,Male,Surabaya,Clothing,800,4.5
+2,32,Female,Jakarta,Electronics,1600,3.8
+3,40,Male,Jogjakarta,Home Decor,1200,4.2
+4,28,Female,Bali,Clothing,960,4.0
+5,35,Male,Surabaya,Electronics,2000,3.5
+6,45,Female,Jakarta,Home Decor,1440,4.7
+7,30,Male,Jogjakarta,Clothing,720,4.9
+8,38,Female,Bali,Electronics,1760,3.2
+9,42,Male,Surabaya,Home Decor,1360,4.6
+10,27,Female,Jakarta,Clothing,880,3.9
