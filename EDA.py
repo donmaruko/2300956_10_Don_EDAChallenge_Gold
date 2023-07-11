@@ -8,8 +8,6 @@ from wordcloud import WordCloud
 from collections import Counter
 from PIL import Image
 
-# analyze_data?
-
 def read_csv_file(file_path):
     with open(file_path, 'rb') as file:
         df = pd.read_csv(io.BytesIO(file.read()))
@@ -19,7 +17,7 @@ def calculate_numeric_columns(data_frame):
     global numeric_columns
     numeric_columns = data_frame.select_dtypes(include=['float', 'integer'])
 
-file_path = 'human_resources.csv'
+file_path = 'customers.csv'
 df = read_csv_file(file_path)
 calculate_numeric_columns(df)
 
@@ -154,11 +152,14 @@ def cleanse_text(text):
     result = {'cleansed_text': cleansed_text}
     return result
 
-def cleanse_text_file(file_path):
-    with open(file_path, 'r') as file:
-        text = file.read()
-    cleansed_text = re.sub(r'[^a-zA-Z0-9]', ' ', text)
-    result = {'cleansed_text': cleansed_text}
+def cleanse_text_file(file_path, encoding='utf-8'):
+    with open(file_path, 'r', encoding=encoding) as file:
+        lines = file.readlines()
+    cleansed_lines = []
+    for line in lines:
+        cleansed_line = re.sub(r'[^a-zA-Z0-9]', ' ', line)
+        cleansed_lines.append(cleansed_line)
+    result = {'cleansed_text': '\n'.join(cleansed_lines)}
     return result
 
 def reverse_text(text):
