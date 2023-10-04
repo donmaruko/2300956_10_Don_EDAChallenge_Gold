@@ -2,6 +2,12 @@
 
 This Python script provides various data analysis and text manipulation functions for CSV data. It includes statistical calculations, data visualization, data manipulation, and text-related operations. The script is designed to be interactive, allowing you to choose and execute specific functions based on your needs.
 
+## Table of Contents
+
+- [Installation](#installation)
+- [Usage](#usage)
+- [Features](#features)
+  
 ## Installation
 
 1. Clone this repository to your local machine:
